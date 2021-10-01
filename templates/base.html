@@ -1,0 +1,34 @@
+{% load sass_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta charset="UTF-8">
+    <link href="{% sass_src 'pages/css/bootstrap.scss' %}" rel="stylesheet" type="text/css" />
+    <title>Title</title>
+</head>
+<body class="bg-secondary">
+  <div>
+    {% block header %}
+      {% include "includes/navbar.html" %}
+	{% endblock header %}
+  </div>
+  <div>
+    {% block content %}
+
+    {% endblock content %}
+  </div>
+  <div>
+    {% block footer %}
+
+	{% endblock footer %}
+  </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+{% block scripts %}
+
+{% endblock scripts %}
+</html>
