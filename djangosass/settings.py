@@ -102,13 +102,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-STATICFILES_FINDERS = [
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'sass_processor.finders.CssFinder',
-]
-
-
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'America/Sao_Paulo'
@@ -120,12 +113,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "_media")
 MEDIA_URL = '/media/'
 
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR+'/static/map/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, "_static")
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-# STATICFILES_DIRS = [('./pages/css/map/', )]
-
-SASS_PROCESSOR_ROOT = STATIC_ROOT
 
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',

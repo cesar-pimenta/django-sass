@@ -1,5 +1,6 @@
 *.idea
 *.sqlite3
 *.pyc
-/venv
+venv
+/venv/
 .env
